@@ -1,0 +1,132 @@
+\documentclass[12pt,oneside,a4paper,article]{abntex2}
+\usepackage[utf8]{inputenc} % Codificação do documento
+\usepackage[T1]{fontenc}    % Seleção de código de fonte.
+\usepackage[brazil]{babel}  % Idioma do documento
+\usepackage{graphicx}       % Inclusão de gráficos
+\usepackage{tabularx}       % Tabelas avançadas
+\usepackage{amsmath}        % Melhorias em matemática
+\usepackage{lipsum}         % Geração de texto dummy
+\usepackage{authblk}
+\usepackage{parskip}
+
+% Configurações específicas do abntex2
+% Aqui você pode adicionar configurações específicas, como redefinições de comandos
+% ou adições de novos pacotes que são essenciais para o seu documento.
+
+% Carrega o pacote abntex2cite para citações
+\usepackage[alf]{abntex2cite} % ou use [num] para citações numéricas
+
+\usepackage[left=3cm,right=2cm,top=3cm,bottom=2cm]{geometry} % Margens
+\usepackage{setspace}       % Espaçamento entre linhas
+% %\usepackage{natbib}         % Formatação de bibliografia
+
+% Informações de título
+\title{\textbf{Documento de Viabilidade de Mangaba's Kitchen}}
+\author{Eve
+llyn Costa \thanks{evellyn.pedroso@ucsal.edu.br}}
+\author{Guilherme Vieira \thanks{guilhermenovais.vieira@ucsal.edu.br}}
+\author{Henrique Silva \thanks{henrique.souza@ucsal.edu.br}}
+\author[1]{Lucas Santos \thanks{lucassantos.garrido@ucsal.edu.br}}
+\author[1]{Maria Luisa \thanks{marialuisacarvalho.silva@ucsal.edu.br}}
+\author[1]{Victor Dantas \thanks{victor.dantas@ucsal.edu.br} }
+\author[1]{Vinicius Kauan \thanks{viniciuskauan.cruz@ucsal.edu.br} }
+\author[1*]{Elton Figueiredo \thanks{elton.figueiredo@pro.ucsal.br}}
+\affil{
+    Engenharia de Software \par
+    Escola de Tecnologias \par
+    Universidade Católica do Salvador (UCSAL) \par
+    Av. Prof. Pinto de Aguiar, 2589 Pituaçu, CEP: 41740-090 \par
+    Salvador/BA, Brasil
+}
+% \affil[1]{\textit {\{evellyn.pedroso,henrique.souza,lucassantos.garrido,guilhermenovais.vieira\}@ucsal.edu.br}}
+% affil[1]{\textit {\{marialuisacarvalho.silva,victor.dantas,viniciuskauan.cruz\}@ucsal.edu.br}}
+% \affil[1*]{\textit {\{elton.figueiredo\}@pro.ucsal.edu.br}}
+
+
+
+
+\date{Agosto 2024}
+
+\newpage
+
+\ifthenelse{\equal{\ABNTEXisarticle}{true}}{%
+\renewcommand{\maketitlehookb}{}
+}{}
+
+% Configurações de aparência do PDF final
+% \usepackage{hyperref} % para inserir links
+\hypersetup{
+    colorlinks=false,       % false: boxed links; true: colored links
+    pdfborder={0 0 0},      % remove as bordas ao redor dos links
+}
+
+\newpage
+\renewcommand*{\Authsep}{, }
+\renewcommand*{\Authand}{, }
+\renewcommand*{\Authands}{, }
+\renewcommand*{\Affilfont}{\normalsize\normalfont}
+\renewcommand*{\Authfont}{\bfseries}    % make author names boldface    
+\setlength{\affilsep}{2em}   % set the space between author and affiliation
+
+\newsavebox\affbox
+
+
+
+\newpage
+
+
+\begin{document}
+
+\begin{center}
+    \includegraphics[width=0.3\textwidth]{imagens-template/ucsal_logo.png} 
+\end{center}
+{\let\newpage\relax\maketitle}
+
+\newpage
+\begin{resumoumacoluna}
+\input{Capitulos/Resumo}
+\vspace{\onelineskip}
+ 
+\noindent
+\textbf{Palavras-chaves}: Scrum, Sprint, Viabilidade.
+\end{resumoumacoluna}
+
+\textual
+
+\vspace{12mm}
+
+\chapter{Introdução}
+    \vspace{-6mm}
+    \input{Capitulos/Introducao}
+\vspace{12mm}
+
+\newpage
+\chapter{Objetivo}
+    \vspace{-6mm}
+    \input{Capitulos/Objetivo}
+\vspace{12mm}
+
+\newpage
+\chapter{Análise de Viabilidade}
+    \vspace{-6mm}
+    \input{Capitulos/Desenvolvimento}
+\vspace{12mm}
+
+\newpage
+\chapter{Cronograma}
+    \vspace{-6mm}
+    \input{Capitulos/Cronograma}
+\vspace{12mm}
+
+\newpage
+\chapter{Conclusão}
+    \vspace{-6mm}
+    \input{Capitulos/Conclusao}
+
+
+% Formatação da bibliografia
+% bibliographystyle{plain}
+% \newpage
+% \bibliography{referencias} % Assume que você tem um arquivo referencias.bib
+
+\end{document}
