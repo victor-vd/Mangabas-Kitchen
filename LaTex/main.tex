@@ -7,8 +7,11 @@
 \usepackage{amsmath}        % Melhorias em matemática
 \usepackage{lipsum}         % Geração de texto dummy
 \usepackage{authblk}
+\usepackage{titlesec}
 \usepackage{parskip}
 \usepackage{pdfpages}
+\usepackage{chngcntr,tocloft}
+
 
 % Configurações específicas do abntex2
 % Aqui você pode adicionar configurações específicas, como redefinições de comandos
@@ -17,9 +20,11 @@
 % Carrega o pacote abntex2cite para citações
 \usepackage[alf]{abntex2cite} % ou use [num] para citações numéricas
 
+    
 \usepackage[left=3cm,right=2.5cm,top=3cm,bottom=2cm]{geometry} % Margens
 \usepackage{setspace}       % Espaçamento entre linhas
-% %\usepackage{natbib}      % Formatação de bibliografia
+\usepackage{natbib}      % Formatação de bibliografia
+
 
 % Informações de título
 \title{\textbf{Documento Mangaba's Kitchen}}
@@ -41,6 +46,7 @@
 % \affil[1]{\textit {\{evellyn.pedroso,henrique.souza,lucassantos.garrido,guilhermenovais.vieira\}@ucsal.edu.br}}
 % affil[1]{\textit {\{marialuisacarvalho.silva,victor.dantas,viniciuskauan.cruz\}@ucsal.edu.br}}
 % \affil[1*]{\textit {\{elton.figueiredo\}@pro.ucsal.edu.br}}
+
 
 \date{Setembro 2024}
 
@@ -67,6 +73,30 @@
 
 \newsavebox\affbox
 
+\counterwithin*{figure}{section}
+\counterwithin*{figure}{subsection}
+\counterwithin*{figure}{subsubsection}
+
+\renewcommand{\thefigure}{%
+  \ifnum\value{subsection}=0
+    \thesection.\arabic{figure}%
+  \else
+    \ifnum\value{subsubsection}=0
+      \thesubsection.\arabic{figure}%
+    \else
+      \thesubsubsection.\arabic{figure}%
+    \fi
+  \fi
+}
+
+
+%\usepackage[T1]{fontenc}
+\renewcommand{\sfdefault}{stix} %% To make only sf fonts to be avant garde.
+%\usepackage{sectsty}
+%\chapterfont{\fontfamily{pag}\selectfont} %% for chapter if you want
+%\sectionfont{\fontfamily{pag}\selectfont}
+%\subsectionfont{\fontfamily{pag}\selectfont} 
+%\subsubsectionfont{\fontfamily{pag}\selectfont}
 
 
 \newpage
@@ -84,17 +114,20 @@
     \end{center}
     
     \newpage
+    \tableofcontents
+
+    \newpage
     \begin{resumoumacoluna}
     \input{Capitulos/Resumo}
     \vspace{\onelineskip}
      
     \noindent
-    \textbf{Palavras-chaves}: Scrum, Kanban, Automação, Gestão, Escalabilidade, Usabilidade.
+    \textbf{Palavras-chaves}: Scrum\cite{livro1}, Kanban, Automação, Gestão, Escalabilidade, Usabilidade, Engenharia de Software\cite{livro2}.
+
     \end{resumoumacoluna}
     
     \textual
     
-    \vspace{12mm}
     
     \section{Introdução}                         
         \input{Capitulos/Introducao}             
@@ -125,10 +158,10 @@
         \input{Capitulos/Requisitos}                    
     \vspace{12mm}                                       
     
-    \newpage                            %%%%%%%
-    \section{Telas do Figma}            %%%%%%%     Definição e conceito de cada tela
-        \input{Capitulos/Figma}         %%%%%%%
-    \vspace{12mm}                       %%%%%%%
+    \newpage                            
+    \section{Telas do Figma}         
+        \input{Capitulos/Figma}         
+    \vspace{12mm}                       
     
     \newpage
     \section{Análise de Viabilidade}
@@ -157,11 +190,10 @@
     
     \newpage                                
     \section{Conclusão}                     
-        \input{Capitulos/Conclusao}         
-    
+        \input{Capitulos/Conclusao}  
+        
     % Formatação da bibliografia
-    % bibliographystyle{plain}
-    % \newpage
-    % \bibliography{referencias} % Assume que você tem um arquivo referencias.bib
+    \bibliographystyle{plain}
+    \bibliography{referencias} % Assume que você tem um arquivo referencias.bib                                          
     
 \end{document}

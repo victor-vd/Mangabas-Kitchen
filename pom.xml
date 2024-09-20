@@ -5,14 +5,14 @@
 	<parent>
 		<groupId>org.springframework.boot</groupId>
 		<artifactId>spring-boot-starter-parent</artifactId>
-		<version>3.3.4</version>
+		<version>3.2.10</version>
 		<relativePath/> <!-- lookup parent from repository -->
 	</parent>
-	<groupId>com.mangabatech</groupId>
+	<groupId>com.mangabastech</groupId>
 	<artifactId>mangabaskitchen</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
 	<name>mangabaskitchen</name>
-	<description>Um projeto de informatização do restaurante Mangaba&apos;s Kitchen</description>
+	<description>Projeto de informatização do restaurante Mangaba&apos;s Kitchen</description>
 	<url/>
 	<licenses>
 		<license/>
@@ -37,10 +37,28 @@
 
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-devtools</artifactId>
+			<scope>runtime</scope>
+			<optional>true</optional>
+		</dependency>
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-test</artifactId>
 			<scope>test</scope>
 		</dependency>
-	</dependencies>
+		<!-- https://mvnrepository.com/artifact/org.springframework.boot/spring-boot-starter-thymeleaf -->
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-thymeleaf</artifactId>
+			<version>3.3.3</version>
+		</dependency>
+	
+   <dependency>
+     <groupId>org.scala-lang</groupId>
+     <artifactId>scala-library</artifactId>
+     <version>2.13.0</version>
+   </dependency>
+ </dependencies>
 
 	<build>
 		<plugins>
