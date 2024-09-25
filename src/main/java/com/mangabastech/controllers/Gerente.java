@@ -1,4 +1,4 @@
-package com.controllers;
+package com.mangabastech.controllers;
 
 import java.io.IOException;
 
@@ -28,8 +28,8 @@ public class Gerente extends HttpServlet {
         request.getRequestDispatcher("/views/gerente.jsp").forward(request, response);
     }
 
-	private void cadastrarPrato(String prato) {
-		// TODO Auto-generated method stub
-		
-	}
+    private void cadastrarPrato(String prato) {
+        // TODO Auto-generated method stub
+
+    }
 }
