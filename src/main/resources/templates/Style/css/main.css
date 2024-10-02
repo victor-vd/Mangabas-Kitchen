@@ -1,5 +1,175 @@
+@font-face {
+  font-family: "open_sanslight";
+  src: url("../../Assets/Fonts/OpenSans-Light-webfont.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "open_sanslight_italic";
+  src: url("../../Assets/Fonts/OpenSans-LightItalic-webfont.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "open_sansregular";
+  src: url("../../Assets/Fonts/OpenSans-Regular-webfont.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "open_sanssemibold";
+  src: url("../../Assets/Fonts/OpenSans-Semibold-webfont.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "open_sanssemibold_italic";
+  src: url("../../Assets/Fonts/OpenSans-SemiboldItalic-webfont.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "open_sansbold";
+  src: url("../../Assets/Fonts/OpenSans-Bold-webfont.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "open_sansbold_italic";
+  src: url("../../Assets/Fonts/OpenSans-BoldItalic-webfont.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "open_sansextrabold";
+  src: url("../../Assets/Fonts/OpenSans-ExtraBold-webfont.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "open_sansextrabold_italic";
+  src: url("../../Assets/Fonts/OpenSans-ExtraBoldItalic-webfont.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
 body {
-  font-size: small;
+  background-image: url(../../Assets/Images/bg_login.png);
+}
+
+.form .form_Start {
+  position: fixed;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  display: none;
+}
+.form_Section {
+  background-color: #F7F1DD;
+  border-radius: 16px;
+  height: fit-content;
+  width: 450px;
+  outline: 1px solid rgb(255, 255, 255);
+  outline-offset: -1px;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  position: fixed;
+  left: 50%;
+  top: 50%;
+  -ms-transform: translate(-50%, -50%);
+  -moz-transform: translate(-50%, -50%);
+  -webkit-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  padding: 20px;
+  border: 1px solid #888888;
+  box-shadow: 4px 8px 32px -16px black;
+  font-weight: bolder;
+}
+.form_flexColumn {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 0 auto;
+  width: 90%;
+}
+.form_flexColumnContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+}
+.form_imageFigure {
+  margin: 32px auto;
+  width: 100%;
+}
+.form_flexColumnContent {
+  display: flex;
+  flex-direction: column;
+  width: 83.04%;
+}
+.form_inputBox {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+}
+.form_inputLabel {
+  width: max-content;
+  height: 23px;
+  margin: 8px 0;
+  color: rgb(30, 30, 30);
+}
+.form_contentBox {
+  display: flex;
+  flex-direction: column;
+  height: fit-content;
+  width: 100%;
+  margin: 8px 0 16px 0;
+  background-color: rgb(255, 255, 255);
+  border-radius: 8px;
+  box-shadow: inset 1px 1px 6px 0px #ECD995;
+  outline-offset: -0.5px;
+}
+.form_inputPrompt {
+  display: block;
+  margin: 0;
+  padding: 10px;
+  width: calc(100% - 20px);
+  height: 100%;
+  color: #1D2F1C;
+  border: none;
+  outline: none;
+  appearance: none;
+  font-size: 20px;
+}
+.form_inputPrompt *:focus {
+  outline: none;
+}
+.form_confirmButton {
+  display: flex;
+  justify-content: center;
+  margin: 32px auto;
+  width: fit-content;
+  height: fit-content;
+  max-width: 100%;
+  color: rgb(255, 255, 255);
+  text-align: center;
+  background-color: rgb(90, 143, 50);
+  border-radius: 16px;
+  padding: 16px 32px;
+  outline: 1px solid rgb(255, 255, 255);
+  outline-offset: -1px;
+  font-size: 20px;
+}
+
+body {
+  font-family: "open_sanssemibold";
+  font-weight: normal;
+  font-style: normal;
+  font-size: 20px;
+  background-color: #F7F1DD;
 }
 
 /*# sourceMappingURL=main.css.map */
