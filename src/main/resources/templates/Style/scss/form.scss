@@ -118,7 +118,7 @@ body {
     &_confirmButton {
         display: flex;
         justify-content: center;
-        margin: 32px auto;
+        margin: 32px auto 8px auto;
         width: fit-content;
         height: fit-content;
         max-width: 100%;
@@ -129,6 +129,26 @@ body {
         padding: 16px 32px;
         outline: 1px solid rgb(255 255 255);
         outline-offset: -1px;
+        font-size: 20px;
+    }
+
+    &_links {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        margin: 16px auto;
+        width: fit-content;
+        height: fit-content;
+        max-width: 100%;
+        text-align: center;
+        color: rgb(90 143 50);
+        font-size: 20px;
+    }
+
+    &_linkLabel {
+
+        margin: 0 16px 8px 16px;
+        color: rgb(90 143 50);
         font-size: 20px;
     }
 }
