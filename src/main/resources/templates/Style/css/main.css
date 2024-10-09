@@ -190,7 +190,7 @@ body {
   margin: 0 auto;
 }
 
-.card {
+.cozinha-card {
   background-color: #fff;
   border: 2px solid #ccc;
   border-radius: 8px;
@@ -200,7 +200,7 @@ body {
   transition: transform 0.2s ease, box-shadow 0.2s ease;
 }
 
-.card:hover {
+.cozinha-card:hover {
   transform: translateY(-5px);
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
 }
