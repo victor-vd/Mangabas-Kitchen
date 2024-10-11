@@ -1,12 +1,15 @@
 @import './fonts.scss';
-@import './form.scss';
+@import './login.scss';
 @import './variables.scss';
-@import './cozinha.scss';
+@import './cozinha/cozinha.scss';
+@import './garçom/garçom.scss';
+@import './gerente/gerente.scss';
 
 body {
-    font-family: 'open_sanssemibold';
+    font-family: 'open_sans';
     font-weight: normal;
     font-style: normal;
     font-size: 20px;
+    margin: 0;
     background-color: $background;
 }

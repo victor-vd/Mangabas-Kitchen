@@ -1,62 +1,68 @@
 @font-face {
-  font-family: "open_sanslight";
+  font-family: "open_sans";
   src: url("../../Assets/Fonts/OpenSans-Light-webfont.woff") format("woff");
-  font-weight: normal;
+  font-weight: 100;
+  font-weight: 200;
   font-style: normal;
 }
 @font-face {
-  font-family: "open_sanslight_italic";
+  font-family: "open_sans";
   src: url("../../Assets/Fonts/OpenSans-LightItalic-webfont.woff") format("woff");
-  font-weight: normal;
-  font-style: normal;
+  font-weight: 100;
+  font-weight: 200;
+  font-style: italic;
 }
 @font-face {
-  font-family: "open_sansregular";
+  font-family: "open_sans";
   src: url("../../Assets/Fonts/OpenSans-Regular-webfont.woff") format("woff");
-  font-weight: normal;
+  font-weight: 300;
+  font-weight: 400;
   font-style: normal;
 }
 @font-face {
-  font-family: "open_sanssemibold";
+  font-family: "open_sans";
   src: url("../../Assets/Fonts/OpenSans-Semibold-webfont.woff") format("woff");
-  font-weight: normal;
+  font-weight: 500;
+  font-weight: 600;
   font-style: normal;
 }
 @font-face {
-  font-family: "open_sanssemibold_italic";
+  font-family: "open_sans";
   src: url("../../Assets/Fonts/OpenSans-SemiboldItalic-webfont.woff") format("woff");
-  font-weight: normal;
-  font-style: normal;
+  font-weight: 500;
+  font-weight: 600;
+  font-style: italic;
 }
 @font-face {
-  font-family: "open_sansbold";
+  font-family: "open_sans";
   src: url("../../Assets/Fonts/OpenSans-Bold-webfont.woff") format("woff");
-  font-weight: normal;
+  font-weight: 700;
+  font-weight: 800;
   font-style: normal;
 }
 @font-face {
-  font-family: "open_sansbold_italic";
+  font-family: "open_sans";
   src: url("../../Assets/Fonts/OpenSans-BoldItalic-webfont.woff") format("woff");
-  font-weight: normal;
-  font-style: normal;
+  font-weight: 700;
+  font-weight: 800;
+  font-style: italic;
 }
 @font-face {
-  font-family: "open_sansextrabold";
+  font-family: "open_sans";
   src: url("../../Assets/Fonts/OpenSans-ExtraBold-webfont.woff") format("woff");
-  font-weight: normal;
+  font-weight: 900;
   font-style: normal;
 }
 @font-face {
-  font-family: "open_sansextrabold_italic";
+  font-family: "open_sans";
   src: url("../../Assets/Fonts/OpenSans-ExtraBoldItalic-webfont.woff") format("woff");
-  font-weight: normal;
-  font-style: normal;
+  font-weight: 900;
+  font-style: italic;
 }
-body {
+.login {
   background-image: url(../../Assets/Images/bg_login.png);
 }
-
-.form .form_Start {
+.login .form .form_Start {
   position: fixed;
   z-index: 1;
   left: 0;
@@ -66,7 +72,7 @@ body {
   overflow: auto;
   display: none;
 }
-.form_Section {
+.login .form_Section {
   background-color: #F7F1DD;
   border-radius: 16px;
   height: fit-content;
@@ -88,40 +94,40 @@ body {
   box-shadow: 4px 8px 32px -16px black;
   font-weight: bolder;
 }
-.form_flexColumn {
+.login .form_flexColumn {
   display: flex;
   flex-direction: column;
   align-items: center;
   margin: 0 auto;
   width: 90%;
 }
-.form_flexColumnContainer {
+.login .form_flexColumnContainer {
   display: flex;
   flex-direction: column;
   align-items: center;
   width: 100%;
 }
-.form_imageFigure {
+.login .form_imageFigure {
   margin: 32px auto;
   width: 100%;
 }
-.form_flexColumnContent {
+.login .form_flexColumnContent {
   display: flex;
   flex-direction: column;
   width: 83.04%;
 }
-.form_inputBox {
+.login .form_inputBox {
   position: relative;
   display: flex;
   flex-direction: column;
 }
-.form_inputLabel {
+.login .form_inputLabel {
   width: max-content;
   height: 23px;
   margin: 8px 0;
   color: rgb(30, 30, 30);
 }
-.form_contentBox {
+.login .form_contentBox {
   display: flex;
   flex-direction: column;
   height: fit-content;
@@ -132,7 +138,7 @@ body {
   box-shadow: inset 1px 1px 6px 0px #ECD995;
   outline-offset: -0.5px;
 }
-.form_inputPrompt {
+.login .form_inputPrompt {
   display: block;
   margin: 0;
   padding: 10px;
@@ -144,10 +150,10 @@ body {
   appearance: none;
   font-size: 20px;
 }
-.form_inputPrompt *:focus {
+.login .form_inputPrompt *:focus {
   outline: none;
 }
-.form_confirmButton {
+.login .form_confirmButton {
   display: flex;
   justify-content: center;
   margin: 32px auto 8px auto;
@@ -163,7 +169,7 @@ body {
   outline-offset: -1px;
   font-size: 20px;
 }
-.form_links {
+.login .form_links {
   display: flex;
   flex-direction: row;
   justify-content: center;
@@ -175,13 +181,13 @@ body {
   color: rgb(90, 143, 50);
   font-size: 20px;
 }
-.form_linkLabel {
+.login .form_linkLabel {
   margin: 0 16px 8px 16px;
   color: rgb(90, 143, 50);
   font-size: 20px;
 }
 
-.cozinha-container {
+.cozinha .container {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
   gap: 15px;
@@ -189,8 +195,7 @@ body {
   max-width: 1200px;
   margin: 0 auto;
 }
-
-.cozinha-card {
+.cozinha .card {
   background-color: #fff;
   border: 2px solid #ccc;
   border-radius: 8px;
@@ -199,13 +204,11 @@ body {
   cursor: pointer;
   transition: transform 0.2s ease, box-shadow 0.2s ease;
 }
-
-.cozinha-card:hover {
+.cozinha .card:hover {
   transform: translateY(-5px);
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
 }
-
-.cozinha-header {
+.cozinha .header {
   background-color: #ffa500;
   color: #fff;
   padding: 10px;
@@ -213,25 +216,20 @@ body {
   font-weight: bold;
   margin-bottom: 10px;
 }
-
-.cozinha-header.green {
+.cozinha .header.green {
   background-color: #00aa00;
 }
-
-.cozinha-header.red {
+.cozinha .header.red {
   background-color: #ff4500;
 }
-
-.cozinha-cozinha-header.yellow {
+.cozinha .header.yellow {
   background-color: #ffd700;
 }
-
-.content {
+.cozinha .content {
   font-size: 16px;
   margin-bottom: 15px;
 }
-
-.details {
+.cozinha .details {
   display: flex;
   justify-content: center;
   padding: 10px;
@@ -240,16 +238,262 @@ body {
   text-align: center;
   font-weight: bold;
 }
-
-.details:hover {
+.cozinha .details:hover {
   background-color: #ffecb3;
 }
 
+.card-description {
+  display: flex;
+  justify-content: space-between;
+  gap: 0 10px;
+}
+.card-description .card-description-info {
+  display: flex;
+  flex-direction: column;
+  gap: 4px 0;
+  margin-right: 32px;
+  width: 90%;
+  min-width: 0;
+}
+.card-description .top-description {
+  display: flex;
+  justify-content: space-between;
+  gap: 0 20px;
+  margin: 0 16px 8px 0;
+}
+.card-description .top-description span {
+  font-weight: 600;
+  font-size: 24px;
+}
+.card-description .top-description .item-subtitle {
+  z-index: 1;
+  display: flex;
+  justify-content: center;
+  min-width: 0;
+  color: rgb(0, 0, 0);
+  text-align: center;
+  text-shadow: 0 1px 4px rgba(0, 0, 0, 0.35);
+}
+.card-description .top-description .item-price {
+  min-width: 0;
+  color: rgb(0, 0, 0);
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.35);
+}
+.card-description .description {
+  margin: 0 29px 0 0;
+  color: rgb(0, 0, 0);
+  letter-spacing: -1.2px;
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.35);
+}
+.card-description .card-description-image {
+  width: 128px;
+  height: 128px;
+  border-radius: 16px;
+}
+
+.card-actions {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  margin-top: 8px;
+}
+
+.item-tags {
+  display: flex;
+  align-self: flex-start;
+  gap: 0 16px;
+  width: fit-content;
+  min-width: 0;
+}
+.item-tags .item-tag {
+  display: flex;
+  flex-direction: column;
+  width: fit-content;
+  height: 32px;
+  min-width: 0;
+  border-radius: 16px;
+  box-shadow: 1px 2px 4px 0 rgba(0, 0, 0, 0.35);
+}
+.item-tags .item-tag .highlight {
+  display: flex;
+  justify-self: center;
+  margin: 2px 16px 0 16px;
+  height: 30px;
+  color: white;
+  text-align: center;
+  text-shadow: 0 1px 4px rgba(0, 0, 0, 0.35);
+}
+.item-tags .item-tag.item-tag-green {
+  background-color: #84BE57;
+}
+.item-tags .item-tag.item-tag-yellow {
+  background-color: #E8BD21;
+}
+
+.increment-buttons {
+  display: flex;
+  gap: 0 14px;
+  width: 204px;
+  min-width: 0;
+}
+.increment-buttons .button {
+  z-index: 1;
+  display: flex;
+  flex-direction: column;
+  margin: 1.5px 0 0;
+  width: 95px;
+  min-width: 0;
+  border-radius: 16px;
+  box-shadow: 1px 2px 4px 0 rgba(0, 0, 0, 0.35);
+}
+.increment-buttons .button .symbol {
+  display: flex;
+  justify-content: center;
+  height: 32px;
+  margin-top: -10px;
+  color: white;
+  font-weight: 900;
+  font-size: 32px;
+  text-align: center;
+  text-shadow: 0 1px 4px rgba(0, 0, 0, 0.35);
+}
+.increment-buttons .button.button-red {
+  background-color: #E88C2F;
+}
+.increment-buttons .button.button-red .symbol {
+  font-size: 38px;
+  margin-top: -18px;
+}
+.increment-buttons .button.button-green {
+  background-color: #84BE57;
+}
+
+.garcom {
+  margin-bottom: 64px;
+  padding-bottom: 64px;
+}
+.garcom .cardapio.main {
+  display: flex;
+  flex-direction: column;
+  background-color: #F7F1DD;
+}
+.garcom .cardapio .top {
+  z-index: 2;
+  display: flex;
+  flex-direction: column;
+}
+.garcom .cardapio .header {
+  height: 86px;
+  display: flex;
+  background-color: #E8BD21;
+}
+.garcom .cardapio .header .header-back {
+  position: absolute;
+  width: 86px;
+  margin: 8px;
+}
+.garcom .cardapio .header .header-title {
+  display: flex;
+  justify-content: center;
+  margin: auto;
+  color: white;
+  text-align: center;
+  text-shadow: 0 1px 4px rgba(0, 0, 0, 0.35);
+  font-size: 36px;
+  font-weight: 700;
+}
+.garcom .cardapio .categories-content {
+  z-index: 1;
+  display: flex;
+  flex-direction: column;
+}
+.garcom .cardapio .categories {
+  display: flex;
+  flex-direction: column;
+  margin: 64px auto 32px auto;
+  width: 90%;
+  background-color: white;
+  border-radius: 16px;
+  box-shadow: inset 1px 4px 8px 0 rgba(0, 0, 0, 0.35);
+}
+.garcom .cardapio .categories .category-row {
+  display: flex;
+  gap: 0 16px;
+  overflow-x: scroll;
+  width: calc(100% - 16px);
+  margin: 16px 0 16px 16px;
+  border-radius: 16px;
+  -ms-overflow-style: none;
+  /* IE and Edge */
+  scrollbar-width: none;
+  /* Firefox */
+}
+.garcom .cardapio .categories .category-row::-webkit-scrollbar {
+  display: none;
+  /* Chrome, Safari and Opera */
+}
+.garcom .cardapio .categories .category-row .item-category {
+  display: flex;
+  flex-direction: column;
+  width: 232px;
+  background-color: rgb(90, 143, 50);
+  border-radius: 16px;
+  box-shadow: 1px 2px 4px 0 rgba(0, 0, 0, 0.35);
+}
+.garcom .cardapio .categories .category-row .item-category .category-title {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 8px 0 14px 0;
+  width: 232px;
+  height: 34px;
+  color: white;
+  text-align: center;
+  text-shadow: 1px 2px 4px rgba(0, 0, 0, 0.35);
+  font-size: 28px;
+  font-weight: 500;
+}
+
+.item-cards {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  background-color: #F7F1DD;
+}
+.item-cards .container {
+  position: absolute;
+  align-self: center;
+  top: 16px;
+  width: 85%;
+  height: fit-content;
+  padding: 20px 20px 0 20px;
+  background-color: white;
+  border-radius: 16px;
+  box-shadow: inset 2px 4px 8px 0 rgba(0, 0, 0, 0.35);
+}
+.item-cards .container .items {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+.item-cards .container .items .item-card {
+  display: flex;
+  flex-direction: column;
+  box-shadow: 0px 0px 8px 0 rgba(0, 0, 0, 0.35);
+  border-radius: 16px;
+  background-color: #F7F1DD;
+  gap: 11px 0;
+  padding: 24px;
+  margin-bottom: 20px;
+}
+
 body {
-  font-family: "open_sanssemibold";
+  font-family: "open_sans";
   font-weight: normal;
   font-style: normal;
   font-size: 20px;
+  margin: 0;
   background-color: #F7F1DD;
 }
 

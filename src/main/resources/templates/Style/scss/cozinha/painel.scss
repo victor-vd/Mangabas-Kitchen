@@ -1,0 +1,65 @@
+.cozinha {
+    .container {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+        gap: 15px;
+        padding: 20px;
+        max-width: 1200px;
+        margin: 0 auto;
+    }
+
+    .card {
+        background-color: #fff;
+        border: 2px solid #ccc;
+        border-radius: 8px;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        padding: 20px;
+        cursor: pointer;
+        transition: transform 0.2s ease, box-shadow 0.2s ease;
+    }
+
+    .card:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    }
+
+    .header {
+        background-color: #ffa500;
+        color: #fff;
+        padding: 10px;
+        border-radius: 5px;
+        font-weight: bold;
+        margin-bottom: 10px;
+    }
+
+    .header.green {
+        background-color: #00aa00;
+    }
+
+    .header.red {
+        background-color: #ff4500;
+    }
+
+    .header.yellow {
+        background-color: #ffd700;
+    }
+
+    .content {
+        font-size: 16px;
+        margin-bottom: 15px;
+    }
+
+    .details {
+        display: flex;
+        justify-content: center;
+        padding: 10px;
+        background-color: #f0e68c;
+        border-radius: 5px;
+        text-align: center;
+        font-weight: bold;
+    }
+
+    .details:hover {
+        background-color: #ffecb3;
+    }
+}
