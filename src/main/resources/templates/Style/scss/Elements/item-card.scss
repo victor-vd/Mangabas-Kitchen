@@ -1,141 +1,193 @@
-.card-description {
+.item-card {
     display: flex;
-    justify-content: space-between;
-    gap: 0 10px;
+    flex-direction: column;
+    margin-bottom: 20px;
 
-    .card-description-info {
+    .item-card-container {
+        z-index: +1;
         display: flex;
         flex-direction: column;
-        gap: 4px 0;
-        margin-right: 32px;
-        width: 90%;
-        min-width: 0;
-    }
-
-    .top-description {
-        display: flex;
-        justify-content: space-between;
-        gap: 0 20px;
-        margin: 0 16px 8px 0;
-
-        span {
-            font-weight: 600;
-            font-size: 24px;
-        }
-
-        .item-subtitle {
-            z-index: 1;
-            display: flex;
-            justify-content: center;
-            min-width: 0;
-            color: rgb(0 0 0);
-            text-align: center;
-            text-shadow: 0 1px 4px rgb(0 0 0 / 35%);
-        }
-
-        .item-price {
-            min-width: 0;
-            color: rgb(0 0 0);
-            text-shadow: 0 1px 2px rgb(0 0 0 / 35%);
-        }
-    }
-
-    .description {
-        margin: 0 29px 0 0;
-        color: rgb(0 0 0);
-        letter-spacing: -1.2px;
-        text-shadow: 0 1px 2px rgb(0 0 0 / 35%);
-    }
-
-    .card-description-image {
-        width: 128px;
-        height: 128px;
+        box-shadow: 0px 0px 8px 0 rgb(0 0 0 / 35%);
         border-radius: 16px;
-    }
-}
+        background-color: $background;
+        gap: 11px 0;
+        padding: 24px;
+        margin-bottom: -24px;
 
-.card-actions {
-    display: flex;
-    justify-content: space-between;
-    width: 100%;
-    margin-top: 8px;
-}
 
-.item-tags {
-    display: flex;
-    align-self: flex-start;
-    gap: 0 16px;
-    width: fit-content;
-    min-width: 0;
-
-    .item-tag {
-        display: flex;
-        flex-direction: column;
-        width: fit-content;
-        height: 32px;
-        min-width: 0;
-        border-radius: 16px;
-        box-shadow: 1px 2px 4px 0 rgb(0 0 0 / 35%);
-
-        .highlight {
+        .card-description {
             display: flex;
-            justify-self: center;
-            margin: 2px 16px 0 16px;
-            height: 30px;
-            color: white;
-            text-align: center;
-            text-shadow: 0 1px 4px rgb(0 0 0 / 35%);
-        }
+            justify-content: space-between;
+            gap: 0 10px;
 
-        &.item-tag-green {
-            background-color: $green;
-        }
+            .card-description-info {
+                display: flex;
+                flex-direction: column;
+                gap: 4px 0;
+                margin-right: 32px;
+                width: 90%;
+                min-width: 0;
+            }
 
-        &.item-tag-yellow {
-            background-color: $yellow;
-        }
-    }
-}
+            .top-description {
+                display: flex;
+                justify-content: space-between;
+                gap: 0 20px;
+                margin: 0 16px 8px 0;
 
-.increment-buttons {
-    display: flex;
-    gap: 0 14px;
-    width: 204px;
-    min-width: 0;
+                span {
+                    font-weight: 600;
+                    font-size: 24px;
+                }
 
-    .button {
-        z-index: 1;
-        display: flex;
-        flex-direction: column;
-        margin: 1.5px 0 0;
-        width: 95px;
-        min-width: 0;
-        border-radius: 16px;
-        box-shadow: 1px 2px 4px 0 rgb(0 0 0 / 35%);
+                .item-subtitle {
+                    z-index: 1;
+                    display: flex;
+                    justify-content: center;
+                    min-width: 0;
+                    color: rgb(0 0 0);
+                    text-align: center;
+                    text-shadow: 0 1px 4px rgb(0 0 0 / 35%);
+                }
 
-        .symbol {
-            display: flex;
-            justify-content: center;
-            height: 32px;
-            margin-top: -10px;
-            color: white;
-            font-weight: 900;
-            font-size: 32px;
-            text-align: center;
-            text-shadow: 0 1px 4px rgb(0 0 0 / 35%);
-        }
+                .item-price {
+                    min-width: 0;
+                    color: rgb(0 0 0);
+                    text-shadow: 0 1px 2px rgb(0 0 0 / 35%);
+                }
+            }
 
-        &.button-red {
-            background-color: $orange;
+            .description {
+                margin: 0 29px 0 0;
+                color: rgb(0 0 0);
+                letter-spacing: -1.2px;
+                text-shadow: 0 1px 2px rgb(0 0 0 / 35%);
+            }
 
-            .symbol {
-                font-size: 38px;
-                margin-top: -18px;
+            .card-description-image {
+                width: 128px;
+                height: 128px;
+                border-radius: 16px;
             }
         }
 
-        &.button-green {
-            background-color: $green;
+        .card-actions {
+            display: flex;
+            justify-content: space-between;
+            width: 100%;
+            margin-top: 8px;
+
+            .item-tags {
+                display: flex;
+                align-self: flex-start;
+                gap: 0 16px;
+                width: fit-content;
+                min-width: 0;
+
+                .item-tag {
+                    display: flex;
+                    flex-direction: column;
+                    width: fit-content;
+                    height: 32px;
+                    min-width: 0;
+                    border-radius: 16px;
+                    box-shadow: 1px 2px 4px 0 rgb(0 0 0 / 35%);
+
+                    .highlight {
+                        display: flex;
+                        justify-self: center;
+                        margin: 2px 16px 0 16px;
+                        height: 30px;
+                        color: white;
+                        text-align: center;
+                        text-shadow: 0 1px 4px rgb(0 0 0 / 35%);
+                    }
+
+                    &.item-tag-green {
+                        background-color: $green;
+                    }
+
+                    &.item-tag-yellow {
+                        background-color: $yellow;
+                    }
+                }
+            }
+
+            .increment-buttons {
+                display: flex;
+                gap: 0 14px;
+                width: 204px;
+                min-width: 0;
+
+                .button {
+                    z-index: 1;
+                    display: flex;
+                    flex-direction: column;
+                    margin: 1.5px 0 0;
+                    width: 95px;
+                    min-width: 0;
+                    border-radius: 16px;
+                    box-shadow: 1px 2px 4px 0 rgb(0 0 0 / 35%);
+
+                    .symbol {
+                        display: flex;
+                        justify-content: center;
+                        height: 32px;
+                        margin-top: -10px;
+                        color: white;
+                        font-weight: 900;
+                        font-size: 32px;
+                        text-align: center;
+                        text-shadow: 0 1px 4px rgb(0 0 0 / 35%);
+                    }
+
+                    &.button-red {
+                        background-color: $orange;
+
+                        .symbol {
+                            font-size: 38px;
+                            margin-top: -18px;
+                        }
+                    }
+
+                    &.button-green {
+                        background-color: $green;
+                    }
+                }
+            }
+        }
+    }
+
+    .card-observations {
+        position: static;
+        margin-top: 0;
+        height: fit-content;
+        align-self: center;
+        width: 98%;
+
+        .card-observations-container {
+            background-color: $sand;
+            border-bottom-left-radius: 16px;
+            border-bottom-right-radius: 16px;
+            box-shadow: 1px 2px 8px -2px black;
+            display: flex;
+            flex-direction: column;
+            padding: 24px;
+
+            .card-items-added,
+            .card-items-removed,
+            .card-observations-others {
+                display: flex;
+                flex-direction: row;
+            }
+
+            .card-observations-text {
+                width: 30%;
+            }
+
+            .card-observations-items {
+                width: 70%;
+            }
         }
     }
 }

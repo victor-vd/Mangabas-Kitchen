@@ -242,12 +242,28 @@
   background-color: #ffecb3;
 }
 
-.card-description {
+.item-card {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 20px;
+}
+.item-card .item-card-container {
+  z-index: 1;
+  display: flex;
+  flex-direction: column;
+  box-shadow: 0px 0px 8px 0 rgba(0, 0, 0, 0.35);
+  border-radius: 16px;
+  background-color: #F7F1DD;
+  gap: 11px 0;
+  padding: 24px;
+  margin-bottom: -24px;
+}
+.item-card .item-card-container .card-description {
   display: flex;
   justify-content: space-between;
   gap: 0 10px;
 }
-.card-description .card-description-info {
+.item-card .item-card-container .card-description .card-description-info {
   display: flex;
   flex-direction: column;
   gap: 4px 0;
@@ -255,17 +271,17 @@
   width: 90%;
   min-width: 0;
 }
-.card-description .top-description {
+.item-card .item-card-container .card-description .top-description {
   display: flex;
   justify-content: space-between;
   gap: 0 20px;
   margin: 0 16px 8px 0;
 }
-.card-description .top-description span {
+.item-card .item-card-container .card-description .top-description span {
   font-weight: 600;
   font-size: 24px;
 }
-.card-description .top-description .item-subtitle {
+.item-card .item-card-container .card-description .top-description .item-subtitle {
   z-index: 1;
   display: flex;
   justify-content: center;
@@ -274,38 +290,36 @@
   text-align: center;
   text-shadow: 0 1px 4px rgba(0, 0, 0, 0.35);
 }
-.card-description .top-description .item-price {
+.item-card .item-card-container .card-description .top-description .item-price {
   min-width: 0;
   color: rgb(0, 0, 0);
   text-shadow: 0 1px 2px rgba(0, 0, 0, 0.35);
 }
-.card-description .description {
+.item-card .item-card-container .card-description .description {
   margin: 0 29px 0 0;
   color: rgb(0, 0, 0);
   letter-spacing: -1.2px;
   text-shadow: 0 1px 2px rgba(0, 0, 0, 0.35);
 }
-.card-description .card-description-image {
+.item-card .item-card-container .card-description .card-description-image {
   width: 128px;
   height: 128px;
   border-radius: 16px;
 }
-
-.card-actions {
+.item-card .item-card-container .card-actions {
   display: flex;
   justify-content: space-between;
   width: 100%;
   margin-top: 8px;
 }
-
-.item-tags {
+.item-card .item-card-container .card-actions .item-tags {
   display: flex;
   align-self: flex-start;
   gap: 0 16px;
   width: fit-content;
   min-width: 0;
 }
-.item-tags .item-tag {
+.item-card .item-card-container .card-actions .item-tags .item-tag {
   display: flex;
   flex-direction: column;
   width: fit-content;
@@ -314,7 +328,7 @@
   border-radius: 16px;
   box-shadow: 1px 2px 4px 0 rgba(0, 0, 0, 0.35);
 }
-.item-tags .item-tag .highlight {
+.item-card .item-card-container .card-actions .item-tags .item-tag .highlight {
   display: flex;
   justify-self: center;
   margin: 2px 16px 0 16px;
@@ -323,20 +337,19 @@
   text-align: center;
   text-shadow: 0 1px 4px rgba(0, 0, 0, 0.35);
 }
-.item-tags .item-tag.item-tag-green {
+.item-card .item-card-container .card-actions .item-tags .item-tag.item-tag-green {
   background-color: #84BE57;
 }
-.item-tags .item-tag.item-tag-yellow {
+.item-card .item-card-container .card-actions .item-tags .item-tag.item-tag-yellow {
   background-color: #E8BD21;
 }
-
-.increment-buttons {
+.item-card .item-card-container .card-actions .increment-buttons {
   display: flex;
   gap: 0 14px;
   width: 204px;
   min-width: 0;
 }
-.increment-buttons .button {
+.item-card .item-card-container .card-actions .increment-buttons .button {
   z-index: 1;
   display: flex;
   flex-direction: column;
@@ -346,7 +359,7 @@
   border-radius: 16px;
   box-shadow: 1px 2px 4px 0 rgba(0, 0, 0, 0.35);
 }
-.increment-buttons .button .symbol {
+.item-card .item-card-container .card-actions .increment-buttons .button .symbol {
   display: flex;
   justify-content: center;
   height: 32px;
@@ -357,15 +370,70 @@
   text-align: center;
   text-shadow: 0 1px 4px rgba(0, 0, 0, 0.35);
 }
-.increment-buttons .button.button-red {
+.item-card .item-card-container .card-actions .increment-buttons .button.button-red {
   background-color: #E88C2F;
 }
-.increment-buttons .button.button-red .symbol {
+.item-card .item-card-container .card-actions .increment-buttons .button.button-red .symbol {
   font-size: 38px;
   margin-top: -18px;
 }
-.increment-buttons .button.button-green {
+.item-card .item-card-container .card-actions .increment-buttons .button.button-green {
   background-color: #84BE57;
+}
+.item-card .card-observations {
+  position: static;
+  margin-top: 0;
+  height: fit-content;
+  align-self: center;
+  width: 98%;
+}
+.item-card .card-observations .card-observations-container {
+  background-color: #ECD995;
+  border-bottom-left-radius: 16px;
+  border-bottom-right-radius: 16px;
+  box-shadow: 1px 2px 8px -2px black;
+  display: flex;
+  flex-direction: column;
+  padding: 24px;
+}
+.item-card .card-observations .card-observations-container .card-items-added,
+.item-card .card-observations .card-observations-container .card-items-removed,
+.item-card .card-observations .card-observations-container .card-observations-others {
+  display: flex;
+  flex-direction: row;
+}
+.item-card .card-observations .card-observations-container .card-observations-text {
+  width: 30%;
+}
+.item-card .card-observations .card-observations-container .card-observations-items {
+  width: 70%;
+}
+
+.top {
+  z-index: 2;
+  display: flex;
+  flex-direction: column;
+}
+
+.header {
+  height: 86px;
+  display: flex;
+  background-color: #E8BD21;
+}
+.header .header-back {
+  position: absolute;
+  width: 86px;
+  margin: 8px;
+}
+.header .header-title {
+  display: flex;
+  justify-content: center;
+  margin: auto;
+  color: white;
+  text-align: center;
+  text-shadow: 0 1px 4px rgba(0, 0, 0, 0.35);
+  font-size: 36px;
+  font-weight: 700;
 }
 
 .garcom {
@@ -376,31 +444,6 @@
   display: flex;
   flex-direction: column;
   background-color: #F7F1DD;
-}
-.garcom .cardapio .top {
-  z-index: 2;
-  display: flex;
-  flex-direction: column;
-}
-.garcom .cardapio .header {
-  height: 86px;
-  display: flex;
-  background-color: #E8BD21;
-}
-.garcom .cardapio .header .header-back {
-  position: absolute;
-  width: 86px;
-  margin: 8px;
-}
-.garcom .cardapio .header .header-title {
-  display: flex;
-  justify-content: center;
-  margin: auto;
-  color: white;
-  text-align: center;
-  text-shadow: 0 1px 4px rgba(0, 0, 0, 0.35);
-  font-size: 36px;
-  font-weight: 700;
 }
 .garcom .cardapio .categories-content {
   z-index: 1;
@@ -477,15 +520,192 @@
   flex-direction: column;
   width: 100%;
 }
-.item-cards .container .items .item-card {
+
+.garcom .gerenciamento-de-mesa {
   display: flex;
   flex-direction: column;
-  box-shadow: 0px 0px 8px 0 rgba(0, 0, 0, 0.35);
-  border-radius: 16px;
   background-color: #F7F1DD;
-  gap: 11px 0;
-  padding: 24px;
-  margin-bottom: 20px;
+}
+.garcom .gerenciamento-de-mesa .order-details-section {
+  text-shadow: 0 1px 4px rgba(0, 0, 0, 0.25);
+  position: relative;
+  align-self: center;
+  justify-content: center;
+  width: 85%;
+  height: fit-content;
+}
+.garcom .gerenciamento-de-mesa .order-details-section .order-details-title {
+  display: flex;
+  justify-content: center;
+  width: 218px;
+  height: 34px;
+  color: black;
+  text-align: center;
+  text-shadow: 0 1px 4px rgba(0, 0, 0, 0.25);
+}
+.garcom .gerenciamento-de-mesa .order-details-section .order-details-container {
+  display: flex;
+  gap: 0 16px;
+  width: 100%;
+  margin-bottom: 24px;
+}
+.garcom .gerenciamento-de-mesa .order-details-section .order-details-details {
+  display: flex;
+  flex-direction: column;
+  gap: 16px 0;
+  width: 100%;
+  min-width: 0;
+}
+.garcom .gerenciamento-de-mesa .order-details-section .employee-details {
+  display: flex;
+  flex-direction: column;
+  margin: 0 2px 0 0;
+  background-color: white;
+  border-radius: 16px;
+  box-shadow: inset 1px 4px 8px 0 rgba(0, 0, 0, 0.25);
+}
+.garcom .gerenciamento-de-mesa .order-details-section .employee-details .employee-name {
+  margin: 11px 7px 11px 16px;
+  width: 316px;
+}
+.garcom .gerenciamento-de-mesa .order-details-section .employee-details .employee-code {
+  margin: 11px 7px 11px 16px;
+  width: 316px;
+}
+.garcom .gerenciamento-de-mesa .order-details-section .table-details {
+  display: flex;
+  flex-direction: column;
+  margin: 0 0 0 2px;
+  background-color: white;
+  border-radius: 16px;
+  box-shadow: inset 1px 4px 8px 0 rgba(0, 0, 0, 0.25);
+}
+.garcom .gerenciamento-de-mesa .order-details-section .table-details .table-id,
+.garcom .gerenciamento-de-mesa .order-details-section .table-details .table-order-id,
+.garcom .gerenciamento-de-mesa .order-details-section .table-details .table-client-name {
+  margin: 12px 12px 12px 12px;
+  width: 316px;
+}
+.garcom .gerenciamento-de-mesa .order-details-section .preparation-details {
+  display: flex;
+  flex-direction: column;
+  margin: 0 2px 0 0;
+  background-color: rgb(90, 143, 50);
+  border-radius: 16px;
+  box-shadow: 1px 2px 4px 0 rgba(0, 0, 0, 0.25);
+}
+.garcom .gerenciamento-de-mesa .order-details-section .preparation-details .preparation-details-container {
+  display: flex;
+  flex-direction: column;
+  margin: 7px auto 10.5px;
+  width: 74.93%;
+}
+.garcom .gerenciamento-de-mesa .order-details-section .preparation-details .preparation-details-container .employee-preparing-card {
+  display: flex;
+  justify-content: center;
+}
+.garcom .gerenciamento-de-mesa .order-details-section .preparation-details .preparation-details-container .employee-preparing-card .employee-preparing {
+  color: white;
+  text-align: center;
+}
+.garcom .gerenciamento-de-mesa .order-details-section .preparation-details .preparation-details-container .employee-preparing-card .employee-name-card {
+  color: white;
+  text-align: center;
+}
+.garcom .gerenciamento-de-mesa .order-details-section .preparation-details .preparation-details-container .preparation-status {
+  z-index: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 3px 11.5px 0 5.5px;
+  color: white;
+  text-align: center;
+}
+.garcom .gerenciamento-de-mesa .order-details-section .preparation-details .preparation-details-container .preparation-eta {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 1.5px 34.5px 0 23.5px;
+  color: white;
+  text-align: center;
+}
+.garcom .gerenciamento-de-mesa .order-details-section .payment-details {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  min-width: 0;
+  background-color: white;
+  border-radius: 16px;
+  box-shadow: inset 1px 4px 8px 0 rgba(0, 0, 0, 0.25);
+}
+.garcom .gerenciamento-de-mesa .order-details-section .payment-details .payment-details-container {
+  display: flex;
+  flex-direction: column;
+  margin: 26px 16px 18px 14px;
+}
+.garcom .gerenciamento-de-mesa .order-details-section .payment-details .payment-details-container .payment-detail-line {
+  z-index: 1;
+  display: flex;
+  justify-content: space-between;
+  gap: 0 10px;
+}
+.garcom .gerenciamento-de-mesa .order-details-section .payment-detail-text {
+  min-width: 0;
+  color: black;
+  text-shadow: 0 1px 4px rgba(0, 0, 0, 0.25);
+}
+.garcom .gerenciamento-de-mesa .order-details-section .payment-detail-text .payment-detail-value {
+  display: flex;
+  justify-content: flex-end;
+  min-width: 0;
+  color: black;
+  text-align: right;
+  text-shadow: 0 1px 4px rgba(0, 0, 0, 0.25);
+}
+.garcom .gerenciamento-de-mesa .order-details-section .payment-detail-method {
+  z-index: 1;
+  display: flex;
+  margin: 23px 0 0;
+}
+.garcom .gerenciamento-de-mesa .order-details-section .payment-detail-method .payment-method-text {
+  width: 180px;
+  min-width: 0;
+  color: black;
+  text-shadow: 0 1px 4px rgba(0, 0, 0, 0.25);
+}
+.garcom .gerenciamento-de-mesa .order-details-section .payment-detail-method .payment-method-button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 3px 0 1px;
+  min-width: 122px;
+  color: white;
+  text-align: center;
+  background-color: rgb(232, 189, 33);
+  border-radius: 16px;
+  padding: 4px 0;
+  box-shadow: 1px 2px 4px 0 rgba(0, 0, 0, 0.25);
+  text-shadow: 0 1px 4px rgba(0, 0, 0, 0.25);
+}
+.garcom .gerenciamento-de-mesa .order-details-section .order-delivery {
+  z-index: 1;
+  display: flex;
+  justify-content: space-between;
+  gap: 0 10px;
+  margin: 26px 0 0;
+}
+.garcom .gerenciamento-de-mesa .order-details-section .order-delivery .order-delivery-text {
+  display: flex;
+  align-items: center;
+  margin: 3px 0 1px;
+  min-width: 0;
+  color: black;
+  text-shadow: 0 1px 4px rgba(0, 0, 0, 0.25);
+}
+.garcom .gerenciamento-de-mesa .order-details-section .order-delivery .payment-detail-checkbox {
+  width: 24px;
+  min-width: 0;
+  border-radius: 4px;
 }
 
 body {
